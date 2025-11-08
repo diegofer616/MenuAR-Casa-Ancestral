@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: IU Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: IU Text
+  m_TableCollectionNameGuidString: 5e50333ac91a21b41a48150b01cefe65
+  m_Entries:
+  - m_Id: 131639332864
+    m_Key: verAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244873396224
+    m_Key: primerBoton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6623549509632
+    m_Key: Piqueos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6689911787520
+    m_Key: Picantes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767951007744
+    m_Key: Platos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157932961452032
+    m_Key: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 158003392204800
+    m_Key: "Ingl\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163383342059520
+    m_Key: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521234182885376
+    m_Key: cargando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521307558039552
+    m_Key: intrucciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521978445352960
+    m_Key: colocar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 567256665870336
+    m_Key: pedir
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 321351045777457459
+  references:
+    version: 2
+    RefIds:
+    - rid: 321351045777457459
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1762231758079

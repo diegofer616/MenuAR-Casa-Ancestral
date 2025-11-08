@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: CremaHongos
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "Hongos org\xE1nicos nativos del sector de pisil\xED de Tarabuco"
+  DescripcionIngles: "Organic mushrooms native to the pisil\xED sector of Tarabuco"
+  ImagenPlato: {fileID: 21300000, guid: e46c79d592b0e7242bd0b90b8d1ad656, type: 3}
+  NombrePlato: Crema hongos nativos
+  ModeloPlato: {fileID: 919132149155446097, guid: 86efae8077751a847b77e589f9c105aa,
+    type: 3}
+  precioPlato: Bs 28

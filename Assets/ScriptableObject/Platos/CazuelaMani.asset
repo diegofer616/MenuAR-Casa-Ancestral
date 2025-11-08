@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: CazuelaMani
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "Combinaci\xF3n suculenta de man\xED, fondo de res / vegetariano,
+    verduras, chu\xF1o"
+  DescripcionIngles: "Succulent combination of peanuts, beef/vegetarian stock, vegetables,
+    and chu\xF1o (freeze-dried potato)."
+  ImagenPlato: {fileID: 21300000, guid: f77581d74a5276d4ea0b2a55ee7a3316, type: 3}
+  NombrePlato: "Cazuela de man\xED"
+  ModeloPlato: {fileID: 919132149155446097, guid: e8d574bd3741d814aac460bc65b6b35f,
+    type: 3}
+  precioPlato: Bs 20

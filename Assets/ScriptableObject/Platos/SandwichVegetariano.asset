@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: SandwichVegetariano
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "Pan casero, hongos salteados en salsa de man\xED"
+  DescripcionIngles: "Homemade bread, mushrooms saut\xE9ed in peanut sauce"
+  ImagenPlato: {fileID: 21300000, guid: b9a37baccc0757947a0f1750e6ccc913, type: 3}
+  NombrePlato: Sandwich Vegetariano
+  ModeloPlato: {fileID: 919132149155446097, guid: 30ac14fe7071ece4fbf183b0db1a9ab4,
+    type: 3}
+  precioPlato: Bs 28

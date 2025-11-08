@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: Tripas
+  m_EditorClassIdentifier: 
+  DescripcionPlato: Tripa de res, mote y papa
+  DescripcionIngles: Beef tripe, hominy and potato
+  ImagenPlato: {fileID: 21300000, guid: f4e5608f275fc4b4fa7a2d39420409fe, type: 3}
+  NombrePlato: Tripitas
+  ModeloPlato: {fileID: 919132149155446097, guid: f8431ddc5d029b945a3fd9c84c74d8ca,
+    type: 3}
+  precioPlato: Bs 23

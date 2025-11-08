@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: IU Text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 5e50333ac91a21b41a48150b01cefe65, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 321351045777457471
+  m_TableData:
+  - m_Id: 131639332864
+    m_Localized: Start AR
+    m_Metadata:
+      m_Items:
+      - rid: 321351045777457471
+  - m_Id: 5244873396224
+    m_Localized: Show menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6623549509632
+    m_Localized: Snacks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6689911787520
+    m_Localized: Spicy Food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6767951007744
+    m_Localized: Main Dishes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157932961452032
+    m_Localized: Spanish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 158003392204800
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163383342059520
+    m_Localized: Languages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521234182885376
+    m_Localized: Loading....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521307558039552
+    m_Localized: Push the button "Show" to show the model of the dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521978445352960
+    m_Localized: Show
+    m_Metadata:
+      m_Items: []
+  - m_Id: 567256665870336
+    m_Localized: Order
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 321351045777457471
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 131639332864
