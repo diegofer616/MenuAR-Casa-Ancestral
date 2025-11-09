@@ -2,18 +2,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
 
 public class ControladorPlato : MonoBehaviour
 {
     [SerializeField] PlatoSO plato;
     [SerializeField] TextMeshProUGUI descripcion;
     [SerializeField] TextMeshProUGUI titulo;
-
+    [SerializeField] UnityEngine.UI.Image imagenPlato;
     void Start()
     {
         // Aseguramos título y texto al arrancar
         if (titulo != null && plato != null)
             titulo.text = plato.NombrePlato;
+            imagenPlato.sprite = plato.ImagenPlato;
 
         UpdateTextForLocale();
     }
