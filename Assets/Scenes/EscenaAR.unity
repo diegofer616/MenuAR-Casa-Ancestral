@@ -6272,7 +6272,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361324178}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &1361324184
 Transform:
   m_ObjectHideFlags: 0
@@ -6302,9 +6302,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HumanSegmentationStencilMode: 0
   m_HumanSegmentationDepthMode: 0
-  m_EnvironmentDepthMode: 3
+  m_EnvironmentDepthMode: 0
   m_EnvironmentDepthTemporalSmoothing: 1
-  m_OcclusionPreferenceMode: 1
+  m_OcclusionPreferenceMode: 0
 --- !u!114 &1361324186
 MonoBehaviour:
   m_ObjectHideFlags: 0
