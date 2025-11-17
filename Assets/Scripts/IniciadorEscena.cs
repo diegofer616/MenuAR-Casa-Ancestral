@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class IniciadorEscena : MonoBehaviour
 {
     [SerializeField] SceneSO[] escenas;
     [SerializeField] public UnityEvent cargandoEscena;
+
     void Start()
     {
         StartCoroutine(CargandoEscena());
@@ -15,21 +18,24 @@ public class IniciadorEscena : MonoBehaviour
 
     IEnumerator CargandoEscena()
     {
-        for (int i = 0; i <= escenas.Length - 1; i++)
+        for (int i = 0; i < escenas.Length; i++)
         {
             SceneSO escenaACargar = escenas[i];
 
-            if (SceneManager.GetSceneByName(escenaACargar.name).isLoaded == false)
+            // Corregido: usar nombreEscena (propiedad) en lugar de .name (nombre del ScriptableObject)
+            var sceneByName = SceneManager.GetSceneByName(escenaACargar.nombreEscena);
+            if (!sceneByName.IsValid() || sceneByName.isLoaded == false)
             {
-                var operacionCargado = SceneManager.LoadSceneAsync(escenaACargar.nombreEscena, LoadSceneMode.Additive);
-                while (!operacionCargado.isDone)
+                var operacionCargado = Addressables.LoadSceneAsync(escenaACargar.nombreEscena, LoadSceneMode.Additive);
+                yield return operacionCargado;
+
+                if (operacionCargado.Status != AsyncOperationStatus.Succeeded)
                 {
-                    yield return null;
+                    Debug.LogError($"Falló carga addressable de escena: {escenaACargar.nombreEscena}");
                 }
             }
-            if(cargandoEscena != null)
-            cargandoEscena.Invoke();
 
+            cargandoEscena?.Invoke();
         }
     }
 }

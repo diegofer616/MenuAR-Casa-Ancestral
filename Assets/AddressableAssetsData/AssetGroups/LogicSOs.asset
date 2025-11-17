@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LogicSOs
+  m_EditorClassIdentifier: 
+  m_GroupName: LogicSOs
+  m_GUID: 1f45cbeb8f85afd43ac10965a8f364db
+  m_SerializeEntries:
+  - m_GUID: 3cabc46fbeae2cb44bf7b94609cfa923
+    m_Address: Assets/Scripts/ScriptableObject/Events/LoadLevelRequestGameEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 899f5f3a15d8d424daf31c30bd53e02b
+    m_Address: Assets/Scripts/ScriptableObject/Events/LoadMenuRequestGameEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89aa1384bfcc02a46803f0e5be03d01e
+    m_Address: Assets/Scripts/ScriptableObject/EscenaAR.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab05f78b427b0cc4b8f3fcc938efdbac
+    m_Address: Assets/Scripts/ScriptableObject/ModelManager.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b99029b2b266f784eb7c0d90d9831d63
+    m_Address: Assets/Scripts/ScriptableObject/Managers.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a076dab9952f3da4fa71619b980f7f00, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d2fad52567958e748a30a799c2c1c175, type: 2}
+    - {fileID: 11400000, guid: 15cfa7d86bf29db4e897139a6c2c2191, type: 2}

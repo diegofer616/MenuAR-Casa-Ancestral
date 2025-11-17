@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
   m_Name: CkoCko
   m_EditorClassIdentifier: 
+  NombrePlato: Pasta al Ckocko de pollo
   DescripcionPlato: "Filetes de pollo con salsa tradiconal con chicha y aj\xED amarillo"
   DescripcionIngles: Chicken fillets with traditional sauce with chicha and yellow
     chili pepper
   ImagenPlato: {fileID: 21300000, guid: 32a1a52c470664c408fe5ac572303c31, type: 3}
-  NombrePlato: Pasta al Ckocko de pollo
+  precioPlato: Bs 60
   ModeloPlato: {fileID: 919132149155446097, guid: 103c382274c54e04ab646010afbab31c,
     type: 3}
-  precioPlato: Bs 60
+  ModeloPlatoAddressable:
+    m_AssetGUID: 103c382274c54e04ab646010afbab31c
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0

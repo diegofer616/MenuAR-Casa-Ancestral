@@ -81,6 +81,10 @@ public class IUManager : MonoBehaviour
             
         titulo.text = plato.NombrePlato;
         modelmanager.SetModel(plato);
+        Debug.Log($"IUManager: SetModel llamado con: {plato?.NombrePlato ?? "null"}");
+        if (modelmanager != null)
+            Debug.Log($"IUManager: modelManager.currentModel ahora = {modelmanager.currentModel?.NombrePlato ?? "null"}");
+
         precio.text = plato.precioPlato;
 
     }

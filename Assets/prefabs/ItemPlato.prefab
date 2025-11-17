@@ -279,7 +279,7 @@ MonoBehaviour:
         m_MethodName: MostrarDescripcion
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7099372ef138b0848904b8a0d5adbbae,
+          m_ObjectArgument: {fileID: 11400000, guid: c3f07eee8d6179642aa59d8244eefd38,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: PlatoSO, Assembly-CSharp
           m_IntArgument: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a382443cd606d14ca8d2ed99a858513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plato: {fileID: 11400000, guid: 7099372ef138b0848904b8a0d5adbbae, type: 2}
+  plato: {fileID: 11400000, guid: c3f07eee8d6179642aa59d8244eefd38, type: 2}
   descripcion: {fileID: 1128269118070683394}
   titulo: {fileID: 1367091315341415093}
   imagenPlato: {fileID: 1737204116434722581}
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885691240449441561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7347b6042ec9e40c4a3cbd7077c91e67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76c457db765bd4640bba6d2a01c294e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -474,7 +474,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 407.2345, y: 50}
+  m_SizeDelta: {x: 370.813, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &7822562810679457332
 CanvasRenderer:
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 65.31247, w: -9.753048}
+  m_margin: {x: 0, y: 0, z: 65.31247, w: -3.8648415}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

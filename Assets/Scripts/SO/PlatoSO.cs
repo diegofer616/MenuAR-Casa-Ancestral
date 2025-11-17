@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
-[CreateAssetMenu(fileName = "PlatoSO", menuName = "Scriptable Objects/PlatoSO")]
+[CreateAssetMenu(menuName = "Scriptable Objects/PlatoSO", fileName = "PlatoSO")]
 public class PlatoSO : ScriptableObject
 {
-    [TextArea(3, 8)]
-    public string DescripcionPlato;
-    [TextArea(3, 8)]
+    public string NombrePlato;
+    [TextArea] public string DescripcionPlato;
     public string DescripcionIngles;
     public Sprite ImagenPlato;
-    public string NombrePlato;
-    public GameObject ModeloPlato;
     public string precioPlato;
 
+    // Prefab directo (fallback)
+    public GameObject ModeloPlato;
+
+    // AssetReference opcional: arrastra aquí el prefab addressable del modelo
+    public AssetReferenceGameObject ModeloPlatoAddressable;
 }
