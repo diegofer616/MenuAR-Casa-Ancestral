@@ -4,9 +4,24 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 public class CambiarIdioma : MonoBehaviour
 {
-    public BoolGameEvent LanguagueSpanish;
+    
     int idiomaSeleccionado;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static CambiarIdioma instancia;
+
+    private void Awake()
+    {
+        if (instancia == null)
+        {
+            instancia = this;
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+    
     private void Start()
     {
         CargarDatos();
@@ -34,9 +49,8 @@ public class CambiarIdioma : MonoBehaviour
             
         }
     }
-    public void ChangeLanguage(bool spanish) 
+    public bool EsEspanol()
     {
-
-        LanguagueSpanish.Raise(spanish);
+        return idiomaSeleccionado == 1 ;
     }
 }

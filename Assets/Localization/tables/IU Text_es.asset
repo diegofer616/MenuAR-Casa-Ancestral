@@ -66,6 +66,15 @@ MonoBehaviour:
     m_Localized: Pedir
     m_Metadata:
       m_Items: []
+  - m_Id: 24885336556490752
+    m_Localized: "Para una mejor experiencia, se recomienda una superficie plana
+      y extensa, sin objetos cercanos y con buena iluminaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24886499779596288
+    m_Localized: Puedes rotar el objeto deslizando dos dedos en direcciones opuestas
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -24,6 +24,7 @@ public class TabGroup : MonoBehaviour
         if (selectButtom == null || button != selectButtom)
         {
             button.background.color = tabHover;
+            button.tabText.color = tabHover;
         }
     }
     public void OnTabExit(TabButtom button)
@@ -35,6 +36,7 @@ public class TabGroup : MonoBehaviour
         selectButtom = button;
         ResetTabs();
         button.background.color = tabActive;
+        button.tabText.color = tabActive;
         
         int index = button.transform.GetSiblingIndex();
         for (int i = 0; i < objectToSwap.Count; i++)
@@ -55,6 +57,7 @@ public class TabGroup : MonoBehaviour
         {
             if (selectButtom != null && button == selectButtom) { continue; }
             button.background.color = Color.white;
+            button.tabText.color = Color.white;
         }
     }
 }

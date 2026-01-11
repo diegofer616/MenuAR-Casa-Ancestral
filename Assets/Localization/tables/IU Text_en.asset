@@ -68,6 +68,15 @@ MonoBehaviour:
     m_Localized: Order
     m_Metadata:
       m_Items: []
+  - m_Id: 24885336556490752
+    m_Localized: For a better experience, a flat, large surface is recommended, with
+      no nearby objects and good lighting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24886499779596288
+    m_Localized: You can rotate the object by sliding two fingers in opposite directions.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

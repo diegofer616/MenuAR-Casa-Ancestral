@@ -6,7 +6,6 @@ public class ControladorTutorial : MonoBehaviour
 {
     [SerializeField] GameObject panelTutorial;
     [SerializeField] VideoPlayer video;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(EsperaTutorial());
@@ -20,10 +19,5 @@ public class ControladorTutorial : MonoBehaviour
     {
         panelTutorial.SetActive(false);
         video.Stop();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

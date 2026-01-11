@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Key: pedir
     m_Metadata:
       m_Items: []
+  - m_Id: 24885336556490752
+    m_Key: tutorialCarga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24886499779596288
+    m_Key: rotacionTutorial
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

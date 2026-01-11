@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class TabButtom : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public TabGroup tabGroup;
     public Image background;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public TextMeshProUGUI tabText;
     void Start()
     {
-        //background = GetComponent<Image>();
         tabGroup.Subscribe(this);
     }
     

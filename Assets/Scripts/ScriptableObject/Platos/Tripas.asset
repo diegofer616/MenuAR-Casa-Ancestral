@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DescripcionPlato: Tripa de res, mote y papa
   DescripcionIngles: Beef tripe, hominy and potato
-  ImagenPlato: {fileID: 21300000, guid: f4e5608f275fc4b4fa7a2d39420409fe, type: 3}
+  ImagenPlato:
+    m_AssetGUID: f4e5608f275fc4b4fa7a2d39420409fe
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   NombrePlato: Tripitas
   ModeloPlato:
     m_AssetGUID: f8431ddc5d029b945a3fd9c84c74d8ca

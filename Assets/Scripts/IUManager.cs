@@ -8,35 +8,33 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.ResourceManagement.AsyncOperations;
 public class IUManager : MonoBehaviour
 {
+    [SerializeField] GameObject botonIniciar;
     [SerializeField] ModelManager modelmanager;
     [SerializeField] TextMeshProUGUI descripcion;
     [SerializeField] TextMeshProUGUI titulo;
     [SerializeField] TextMeshProUGUI precio;
-    [SerializeField] GameObject imagenObject;
     [SerializeField] private UnityEngine.UI.Image imagen;
     [SerializeField] List <GameObject> menues;
     [SerializeField] int indiceMenu =0;
     [SerializeField] GameObject prefab;
     [SerializeField] List <GameObject> categorias;
     public List<PlatoSO> platosCargados = new List<PlatoSO>();
-    private AsyncOperationHandle<Sprite> imagenHandle;
-    private bool imagenCargada = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //private AsyncOperationHandle<Sprite> imagenHandle;
+ 
     void Start()
     {
         InstanciarPlatos();
-        imagen =imagenObject.GetComponent<UnityEngine.UI.Image>();
         if (VerificarPrimeraVez.instance.EsPrimeraVez())
         {
             menues[0].SetActive(true);
             menues[1].SetActive(false);
+            VerificarPrimeraVez.instance.SetPrimeraVez();
         }
         else
         {
             menues[0].SetActive(false);
             indiceMenu = 1;
         }
-        VerificarPrimeraVez.instance.SetPrimeraVez();
     }
     private void OnEnable()
     {
@@ -66,7 +64,6 @@ public class IUManager : MonoBehaviour
     }
     void PlatoSeleccionado(PlatoSO plato) 
     {
-        
         SetIndiceMenu(2);
         MostrarDescripcion(plato);
         menues[2].SetActive(true);
@@ -87,7 +84,7 @@ public class IUManager : MonoBehaviour
            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
            {
                Debug.Log("Platos cargados: " + platosCargados.Count);
-                MostrarPlatosCanvas();
+               MostrarPlatosCanvas();
             }
         };
         
@@ -100,10 +97,13 @@ public class IUManager : MonoBehaviour
 
             newPlato.transform.SetParent(categorias[plato.categoriaPlato].transform, false);
             newPlato.GetComponent<ControladorPlato>().SetPlato(plato);
-           // newPlato.GetComponent<ControladorPlato>().Init(plato);
         }
+        IniciarBotonMenu();
     }
-
+    public void IniciarBotonMenu() 
+    {
+        botonIniciar.GetComponent<Button>().interactable = true;
+    }
     public void MostrarDescripcion(PlatoSO plato)
     {
         if (!plato.ImagenPlato.OperationHandle.IsValid())
@@ -125,26 +125,12 @@ public class IUManager : MonoBehaviour
             // Ya estaba cargado, solo usamos el resultado
             imagen.sprite = plato.ImagenPlato.OperationHandle.Result as Sprite;
         }
-        if (LocalizationSettings.SelectedLocale.Identifier.Code == "en")
-        {
-            descripcion.text = plato.DescripcionIngles;
-        }
-        else
-        {
-            descripcion.text = plato.DescripcionPlato;
-        }
-            
+        descripcion.text = CambiarIdioma.instancia.EsEspanol() ? plato.DescripcionPlato : plato.DescripcionIngles;
         titulo.text = plato.NombrePlato;
         modelmanager.SetModel(plato);
         precio.text = plato.precioPlato;
 
     }
-    public void LiberarImagenPlato(PlatoSO plato)
-    {
-        if (plato.ImagenPlato.OperationHandle.IsValid())
-        {
-            plato.ImagenPlato.ReleaseAsset();
-        }
-    }
+    
 
 }
