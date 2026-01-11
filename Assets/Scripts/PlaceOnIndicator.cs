@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +12,7 @@ public class PlaceOnIndicator : MonoBehaviour
     [SerializeField] GameObject placementIndicator;
     [SerializeField] GameObject placedPrefab;
     [SerializeField] ARPlaneManager arPlaneManager;
-    [SerializeField] float planeVisibilityCheckInterval = 0.25f; // cada cuanto se revisan visibilidades
-    [SerializeField] float maxPlaneViewDistance = 5f; // distancia máxima para considerar visible
-    [SerializeField] float overlapThreshold = 0.25f; // si dos planos están a menos de esto (m) se consideran solapados
+    [SerializeField] float overlapThreshold = 0.25f; // si dos planos/objetos están a menos de esto (m) se consideran solapados
 
     GameObject spawnedObject;
     [SerializeField] InputAction touchInput;
@@ -25,8 +22,6 @@ public class PlaceOnIndicator : MonoBehaviour
 
     // Último plano objetivo del raycast (si existe)
     ARPlane lastHitPlane;
-
-    float visibilityTimer = 0f;
 
     private void Awake()
     {
@@ -38,6 +33,9 @@ public class PlaceOnIndicator : MonoBehaviour
             placementIndicator.SetActive(false);
         else
             Debug.LogWarning("PlaceOnIndicator: placementIndicator no está asignado.", this);
+
+        // Asegurarnos de que los planos sean visibles al inicio
+        EnsureAllPlaneVisuals(true);
     }
 
     private void OnEnable()
@@ -58,19 +56,13 @@ public class PlaceOnIndicator : MonoBehaviour
             touchInput.Disable();
     }
 
-    private void Start()
-    {
-        // Inicializar visibilidad de planos
-        UpdateAllPlanesVisibility(true);
-    }
-
     private void Update()
     {
         if (aRRaycastManager == null || placementIndicator == null)
             return;
 
-        // Raycast al centro (puedes volver a Screen.width/2 si quieres)
-        Vector2 screenPoint = new Vector2(Screen.width / 3f, Screen.height / 3f);
+        // Raycast al centro de la pantalla
+        Vector2 screenPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
         if (aRRaycastManager.Raycast(screenPoint, hits, TrackableType.PlaneWithinPolygon))
         {
@@ -97,17 +89,9 @@ public class PlaceOnIndicator : MonoBehaviour
             placementIndicator.SetActive(false);
             lastHitPlane = null;
         }
-
-        // Actualizar visibilidad de planos periódicamente (no cada frame)
-        visibilityTimer += Time.deltaTime;
-        if (visibilityTimer >= planeVisibilityCheckInterval)
-        {
-            visibilityTimer = 0f;
-            UpdatePlaneVisibilityBasedOnCamera();
-        }
     }
 
-    // Lógica de colocación evitando solapamientos con planos cercanos
+    // Lógica de colocación evitando solapamientos con objetos/planos cercanos
     public void PlaceObject()
     {
         if (placementIndicator == null || !placementIndicator.activeInHierarchy)
@@ -119,11 +103,13 @@ public class PlaceOnIndicator : MonoBehaviour
             return;
         }
 
-        // Si no hay ARPlaneManager o lastHitPlane, hacemos una comprobación simple con objetos ya colocados
+        Vector3 placePos = placementIndicator.transform.position;
+        Quaternion placeRot = placementIndicator.transform.rotation;
+
+        // Si no hay ARPlaneManager o lastHitPlane, comprobación simple contra objeto ya colocado
         if (arPlaneManager == null || lastHitPlane == null)
         {
-            // Evitar colocar encima de otro objeto spawn (si está muy cerca)
-            if (spawnedObject != null && Vector3.Distance(spawnedObject.transform.position, placementIndicator.transform.position) < overlapThreshold)
+            if (spawnedObject != null && Vector3.Distance(spawnedObject.transform.position, placePos) < overlapThreshold)
             {
                 Debug.Log("PlaceOnIndicator: ya hay un objeto muy cercano; no se coloca.");
                 return;
@@ -131,17 +117,18 @@ public class PlaceOnIndicator : MonoBehaviour
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(placedPrefab, placementIndicator.transform.position, placementIndicator.transform.rotation);
+                spawnedObject = Instantiate(placedPrefab, placePos, placeRot);
+                FinishPlacement();
             }
             else
             {
-                spawnedObject.transform.SetPositionAndRotation(placementIndicator.transform.position, placementIndicator.transform.rotation);
+                spawnedObject.transform.SetPositionAndRotation(placePos, placeRot);
             }
 
             return;
         }
 
-        // Si tenemos el plano que fue raycasteado, comprobamos si está demasiado cerca de otros planos
+        // Si hay plano objetivo, comprobamos planos cercanos para evitar solapamientos
         ARPlane bestPlane = lastHitPlane;
         foreach (var plane in arPlaneManager.trackables)
         {
@@ -150,7 +137,6 @@ public class PlaceOnIndicator : MonoBehaviour
             float dist = Vector3.Distance(plane.transform.position, lastHitPlane.transform.position);
             if (dist < overlapThreshold)
             {
-                // si están muy cerca, elegimos el que tenga mayor tamaño (area estimada por size.x * size.y)
                 float sizeA = GetPlaneArea(bestPlane);
                 float sizeB = GetPlaneArea(plane);
                 if (sizeB > sizeA)
@@ -158,25 +144,11 @@ public class PlaceOnIndicator : MonoBehaviour
             }
         }
 
-        // Si el mejor plano está demasiado cerca de un objeto ya colocado, no colocamos
-        if (spawnedObject != null && Vector3.Distance(spawnedObject.transform.position, bestPlane.transform.position) < overlapThreshold)
-        {
-            Debug.Log("PlaceOnIndicator: existe un objeto ya colocado muy cercano al plano seleccionado; no se coloca.");
-            return;
-        }
-
-        // Colocar sobre bestPlane (usar su centro y rotación)
-        Vector3 placePos = placementIndicator.transform.position;
-        Quaternion placeRot = placementIndicator.transform.rotation;
-
-        // Ajuste opcional: si quieres alinear con la normal del plano:
-        // placeRot = Quaternion.LookRotation(bestPlane.transform.up, Camera.main ? Camera.main.transform.forward : Vector3.forward);
-
+        // Colocar sobre bestPlane (usa la posición del indicador)
         if (spawnedObject == null)
         {
             spawnedObject = Instantiate(placedPrefab, placePos, placeRot);
-            objectManipulator.getARObject(spawnedObject);
-            spawnedObject.SetActive(true);
+            FinishPlacement();
         }
         else
         {
@@ -184,84 +156,37 @@ public class PlaceOnIndicator : MonoBehaviour
         }
     }
 
+    void FinishPlacement()
+    {
+        if (objectManipulator != null)
+            objectManipulator.getARObject(spawnedObject);
+        spawnedObject.SetActive(true);
+    }
+
     float GetPlaneArea(ARPlane plane)
     {
         if (plane == null) return 0f;
-        // ARPlane.size es un Vector2 (x = width, y = height) en muchas versiones de AR Foundation
         try
         {
             return plane.size.x * plane.size.y;
         }
         catch
         {
-            // fallback aproximado: usar extents
             return plane.extents.x * plane.extents.y;
         }
     }
 
-    // Comprueba visibilidad de todos los planos según la cámara
-    void UpdatePlaneVisibilityBasedOnCamera()
+    // Fuerza que todos los visualizadores y renderers de planos estén activos/inactivos
+    void EnsureAllPlaneVisuals(bool active)
     {
         if (arPlaneManager == null) return;
-
-        Camera cam = Camera.main;
-        if (cam == null)
-            return;
-
-        Plane[] frustumPlanes = GeometryUtility.CalculateFrustumPlanes(cam);
-
         foreach (var plane in arPlaneManager.trackables)
         {
-            bool visible = IsPlaneInView(plane, cam, frustumPlanes);
-            SetPlaneVisualsActive(plane, visible);
+            var renderers = plane.GetComponentsInChildren<Renderer>(true);
+            foreach (var r in renderers) r.enabled = active;
+
+            var meshVisualizers = plane.GetComponentsInChildren<ARPlaneMeshVisualizer>(true);
+            foreach (var v in meshVisualizers) v.enabled = active;
         }
-    }
-
-    // Habilita o deshabilita renderers del plano sin desactivar el trackable
-    void SetPlaneVisualsActive(ARPlane plane, bool active)
-    {
-        if (plane == null) return;
-
-        // Habilitar/deshabilitar todos los Renderers hijos (mesh de plano, boundary, etc.)
-        var renderers = plane.GetComponentsInChildren<Renderer>(true);
-        foreach (var r in renderers)
-            r.enabled = active;
-
-        // Si usas componentes específicos como ARPlaneMeshVisualizer u otros visualizadores,
-        // puedes habilitarlos/deshabilitarlos aquí en lugar de destruir el GameObject.
-        var meshVisualizers = plane.GetComponentsInChildren<ARPlaneMeshVisualizer>(true);
-        foreach (var v in meshVisualizers)
-            v.enabled = active;
-    }
-
-    // Determina si el plano está dentro del frustum y a una distancia razonable y con ángulo aceptable
-    bool IsPlaneInView(ARPlane plane, Camera cam, Plane[] frustumPlanes)
-    {
-        if (plane == null || cam == null) return false;
-
-        Vector3 center = plane.transform.position;
-        Vector3 toCenter = center - cam.transform.position;
-        float dist = toCenter.magnitude;
-        if (dist > maxPlaneViewDistance) return false;
-
-        // test frustum
-        Bounds b = new Bounds(center, new Vector3(Mathf.Max(0.1f, plane.size.x), 0.01f, Mathf.Max(0.1f, plane.size.y)));
-        if (!GeometryUtility.TestPlanesAABB(frustumPlanes, b))
-            return false;
-
-        // test ángulo frontal (evitar planos que están "detrás" por rotación)
-        float dot = Vector3.Dot(cam.transform.forward.normalized, toCenter.normalized);
-        if (dot < 0.25f) // ajustar umbral según necesidad
-            return false;
-
-        return true;
-    }
-
-    // Util: activar todos los planos (por ejemplo al iniciar)
-    void UpdateAllPlanesVisibility(bool active)
-    {
-        if (arPlaneManager == null) return;
-        foreach (var plane in arPlaneManager.trackables)
-            SetPlaneVisualsActive(plane, active);
     }
 }

@@ -51,9 +51,9 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 37af82078c7c39c4daff6bbb552ef04a
+    m_Id: 76b2f1281d200804fa4234bff1a54921
   m_RemoteCatalogLoadPath:
-    m_Id: f8a738b14a2c1374d99ab3b61ba22f1f
+    m_Id: 44945b2e80abbd44a870d4120b974b38
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 042d1accf324ed94985cd3f79c1199d7, type: 2}
   - {fileID: 11400000, guid: abb2abb52edfe0d4a884552e0e8e1d40, type: 2}
+  - {fileID: 11400000, guid: b8c87fe092b026947b409c7eef27d995, type: 2}
   - {fileID: 11400000, guid: ca67c8606fe5a6e46bc66dc087b74b94, type: 2}
   - {fileID: 11400000, guid: 1dbdf536dbfd1864988520179df216e6, type: 2}
   - {fileID: 11400000, guid: c6c838e3ab5b31948883a371be6b85db, type: 2}
@@ -108,6 +109,8 @@ MonoBehaviour:
     - Locale-en
     - Locale-es
     - Preload
+    - model
+    - plate
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 8f3ed0da75c03f342bd3ad9dbbddf212, type: 2}

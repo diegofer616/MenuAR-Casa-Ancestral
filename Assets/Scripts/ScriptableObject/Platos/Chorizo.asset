@@ -16,6 +16,11 @@ MonoBehaviour:
   DescripcionIngles: Homemade bread, salad and artisanal chorizo
   ImagenPlato: {fileID: 21300000, guid: bb5019c667f48134ab19f689126a10b7, type: 3}
   NombrePlato: "Chorizo Chuquisaque\xF1o"
-  ModeloPlato: {fileID: 919132149155446097, guid: 7fc8ae1ac7cfce44d938fb779ec0f8d4,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: 164bb2c79276ef04cb7c53fb58404d51
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 50
+  categoriaPlato: 0

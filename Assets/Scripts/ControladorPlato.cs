@@ -3,22 +3,65 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
-
+using System;
+using UnityEngine.ResourceManagement.AsyncOperations;
 public class ControladorPlato : MonoBehaviour
 {
     [SerializeField] PlatoSO plato;
     [SerializeField] TextMeshProUGUI descripcion;
     [SerializeField] TextMeshProUGUI titulo;
     [SerializeField] UnityEngine.UI.Image imagenPlato;
+    [SerializeField] Button boton;
+    public static event Action<PlatoSO> OnPlatoSeleccionado;
+
+    void NotificarClick()
+    {
+        
+        OnPlatoSeleccionado?.Invoke(plato);
+    }
     void Start()
     {
+        /*
         // Aseguramos título y texto al arrancar
         if (titulo != null && plato != null)
+        {
             titulo.text = plato.NombrePlato;
             imagenPlato.sprite = plato.ImagenPlato;
-
+        } */
         UpdateTextForLocale();
     }
+    public void SetPlato(PlatoSO nuevoPlato)
+    {
+        plato = nuevoPlato;
+        titulo.text = plato.NombrePlato;
+        if (plato.ImagenPlato != null)
+        {
+            // Si aún no está cargado lo cargamos
+            if (!plato.ImagenPlato.OperationHandle.IsValid())
+            {
+                plato.ImagenPlato.LoadAssetAsync<Sprite>().Completed += handle =>
+                {
+                    if (handle.Status == AsyncOperationStatus.Succeeded)
+                    {
+                        imagenPlato.sprite = handle.Result;
+                    }
+                    else
+                    {
+                        Debug.LogError("No se pudo cargar el sprite del plato: " + plato.NombrePlato);
+                    }
+                };
+            }
+            else
+            {
+                // Ya estaba cargado solo usamos el resultado
+                imagenPlato.sprite = plato.ImagenPlato.OperationHandle.Result as Sprite;
+            }
+        }
+        boton.onClick.RemoveAllListeners();
+        boton.onClick.AddListener(NotificarClick);
+        UpdateTextForLocale();
+    }
+    
 
     private void OnEnable()
     {
@@ -26,8 +69,10 @@ public class ControladorPlato : MonoBehaviour
         LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
 
         // Actualizar al activarse (por si SelectedLocale ya está disponible)
-        UpdateTextForLocale();
+        //StartCoroutine(WaitForLocalizationAndUpdate());
     }
+
+    
 
     private void OnDisable()
     {
@@ -74,4 +119,5 @@ public class ControladorPlato : MonoBehaviour
 
         descripcion.text = spanish ? plato.DescripcionPlato : plato.DescripcionIngles;
     }
+
 }

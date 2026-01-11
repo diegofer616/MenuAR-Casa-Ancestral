@@ -2,9 +2,10 @@ using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 using System.Collections.Generic;
 using UnityEngine.Localization.Settings;
-
+using UnityEngine.ResourceManagement.AsyncOperations;
 public class IUManager : MonoBehaviour
 {
     [SerializeField] ModelManager modelmanager;
@@ -15,10 +16,15 @@ public class IUManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image imagen;
     [SerializeField] List <GameObject> menues;
     [SerializeField] int indiceMenu =0;
-    
+    [SerializeField] GameObject prefab;
+    [SerializeField] List <GameObject> categorias;
+    public List<PlatoSO> platosCargados = new List<PlatoSO>();
+    private AsyncOperationHandle<Sprite> imagenHandle;
+    private bool imagenCargada = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        InstanciarPlatos();
         imagen =imagenObject.GetComponent<UnityEngine.UI.Image>();
         if (VerificarPrimeraVez.instance.EsPrimeraVez())
         {
@@ -32,10 +38,10 @@ public class IUManager : MonoBehaviour
         }
         VerificarPrimeraVez.instance.SetPrimeraVez();
     }
-    
-    
-    
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        ControladorPlato.OnPlatoSeleccionado += PlatoSeleccionado;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -58,19 +64,68 @@ public class IUManager : MonoBehaviour
             }
         }
     }
+    void PlatoSeleccionado(PlatoSO plato) 
+    {
+        
+        SetIndiceMenu(2);
+        MostrarDescripcion(plato);
+        menues[2].SetActive(true);
+        menues[1].SetActive(false);
+    }
     public void SetIndiceMenu(int indice)
     {
         indiceMenu = indice;
     }
-    public void AbrirEnlace(string hola) 
+    public void InstanciarPlatos()
     {
-        Application.OpenURL("wa.me/59173336823/?text+hola+chau");
+        Addressables.LoadAssetsAsync<PlatoSO>("plate", plate =>
+        {
+           platosCargados.Add(plate);
+        }
+        ).Completed += handle =>
+        {
+           if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+           {
+               Debug.Log("Platos cargados: " + platosCargados.Count);
+                MostrarPlatosCanvas();
+            }
+        };
+        
+    }
+    public void MostrarPlatosCanvas()
+    {
+        foreach (var plato in platosCargados)
+        {
+            GameObject newPlato = Instantiate(prefab, this.transform.position, Quaternion.identity);
+
+            newPlato.transform.SetParent(categorias[plato.categoriaPlato].transform, false);
+            newPlato.GetComponent<ControladorPlato>().SetPlato(plato);
+           // newPlato.GetComponent<ControladorPlato>().Init(plato);
+        }
     }
 
     public void MostrarDescripcion(PlatoSO plato)
     {
-        imagen.sprite = plato.ImagenPlato;
-        if(LocalizationSettings.SelectedLocale.Identifier.Code == "en")
+        if (!plato.ImagenPlato.OperationHandle.IsValid())
+        {
+            plato.ImagenPlato.LoadAssetAsync<Sprite>().Completed += handle =>
+            {
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    imagen.sprite = handle.Result;
+                }
+                else
+                {
+                    Debug.LogWarning("No se pudo cargar la imagen del plato");
+                }
+            };
+        }
+        else
+        {
+            // Ya estaba cargado, solo usamos el resultado
+            imagen.sprite = plato.ImagenPlato.OperationHandle.Result as Sprite;
+        }
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "en")
         {
             descripcion.text = plato.DescripcionIngles;
         }
@@ -84,5 +139,12 @@ public class IUManager : MonoBehaviour
         precio.text = plato.precioPlato;
 
     }
-    
+    public void LiberarImagenPlato(PlatoSO plato)
+    {
+        if (plato.ImagenPlato.OperationHandle.IsValid())
+        {
+            plato.ImagenPlato.ReleaseAsset();
+        }
+    }
+
 }

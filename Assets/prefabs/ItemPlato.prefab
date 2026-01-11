@@ -315,6 +315,7 @@ MonoBehaviour:
   descripcion: {fileID: 1128269118070683394}
   titulo: {fileID: 1367091315341415093}
   imagenPlato: {fileID: 1737204116434722581}
+  boton: {fileID: 677936581274170414}
 --- !u!1 &6885691240449441561
 GameObject:
   m_ObjectHideFlags: 0

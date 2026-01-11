@@ -1,6 +1,7 @@
 
 using UnityEngine;
-
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 public class ARObjectController : MonoBehaviour
 {
     public ModelManager modelManager;
@@ -32,13 +33,32 @@ public class ARObjectController : MonoBehaviour
         if (modelManager.currentModel == null) return;
 
         if (currentInstance != null)
-            Destroy(currentInstance);
+        {
+            Addressables.ReleaseInstance(currentInstance);
+            currentInstance = null;
+        }
 
-        currentInstance = Instantiate(
-            modelManager.currentModel.ModeloPlato,
-            modelHolder
-        );
+
+        modelManager.currentModel.ModeloPlato
+            .InstantiateAsync(modelHolder)
+            .Completed += OnModelLoaded;
+        
         //currentInstance.SetActive(false);
+    }
+    private void OnModelLoaded(AsyncOperationHandle<GameObject> obj)
+    {
+        if (obj.Status == AsyncOperationStatus.Succeeded)
+        {
+            currentInstance = obj.Result;
+            //currentInstance.transform.localPosition = Vector3.zero;
+            //currentInstance.transform.localRotation = Quaternion.identity;
+            //currentInstance.transform.localScale = Vector3.one;
+            //currentInstance.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Failed to load model.");
+        }
     }
 
     public void RefreshModel()

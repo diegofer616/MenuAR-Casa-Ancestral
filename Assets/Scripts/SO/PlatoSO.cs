@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.AddressableAssets;
 [CreateAssetMenu(fileName = "PlatoSO", menuName = "Scriptable Objects/PlatoSO")]
 public class PlatoSO : ScriptableObject
 {
@@ -7,9 +7,9 @@ public class PlatoSO : ScriptableObject
     public string DescripcionPlato;
     [TextArea(3, 8)]
     public string DescripcionIngles;
-    public Sprite ImagenPlato;
+    public AssetReferenceSprite ImagenPlato;
     public string NombrePlato;
-    public GameObject ModeloPlato;
+    public AssetReferenceGameObject ModeloPlato;
     public string precioPlato;
-
+    public int categoriaPlato;
 }

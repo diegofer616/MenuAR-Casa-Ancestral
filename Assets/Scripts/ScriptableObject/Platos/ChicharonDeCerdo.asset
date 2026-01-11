@@ -16,6 +16,11 @@ MonoBehaviour:
   DescripcionIngles: Golden pork, hominy, potato, pickled vegetables
   ImagenPlato: {fileID: 21300000, guid: 5a07710b217d04d4c92a4c3b072277e0, type: 3}
   NombrePlato: Chicharon de cerdo
-  ModeloPlato: {fileID: 919132149155446097, guid: 1531dfce7ebfcea4391f97bacbfa3eba,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: 1531dfce7ebfcea4391f97bacbfa3eba
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 60
+  categoriaPlato: 2

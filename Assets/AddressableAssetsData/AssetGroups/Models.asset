@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Models
+  m_EditorClassIdentifier: 
+  m_GroupName: Models
+  m_GUID: 770613e8154bc494f8a2275f196d0610
+  m_SerializeEntries:
+  - m_GUID: 1531dfce7ebfcea4391f97bacbfa3eba
+    m_Address: Assets/modelados/chicharron.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 164bb2c79276ef04cb7c53fb58404d51
+    m_Address: Assets/modelados/charkekan.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3892e1cc3db67f24eaf549f2c9fefd3d
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Chorizo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a07710b217d04d4c92a4c3b072277e0
+    m_Address: Assets/Sprites/platosImagenes/chicharron.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69c5211c6ff7e0742bd8dc3704017334
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Tripas.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79da980742f566a43a129f517ef1cef3
+    m_Address: Assets/Scripts/ScriptableObject/Platos/ChicharonDeCerdo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82b7e0a6dc8f1824b8da2ee41de73e02
+    m_Address: Assets/modelados/sandich de charque.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb5019c667f48134ab19f689126a10b7
+    m_Address: Assets/Sprites/platosImagenes/chorizo 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4e5608f275fc4b4fa7a2d39420409fe
+    m_Address: Assets/Sprites/platosImagenes/tripas.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8431ddc5d029b945a3fd9c84c74d8ca
+    m_Address: Assets/modelados/tripas.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - model
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a076dab9952f3da4fa71619b980f7f00, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f953c2833b6a4eb428304935cf8db476, type: 2}
+    - {fileID: 11400000, guid: 420b8a7f3fbf04249a692b8e65f8836f, type: 2}
