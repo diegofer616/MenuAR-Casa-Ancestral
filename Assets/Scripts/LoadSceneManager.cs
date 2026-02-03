@@ -70,7 +70,7 @@ public class LoadSceneManager : MonoBehaviour
             var currentLoadedLevel = SceneManager.GetActiveScene();
 
             
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(8f);
             
             AsyncOperation loadSceneProcess = SceneManager.LoadSceneAsync(request.escena.nombreEscena, LoadSceneMode.Additive);
             while (!loadSceneProcess.isDone)

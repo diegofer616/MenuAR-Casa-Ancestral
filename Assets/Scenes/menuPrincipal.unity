@@ -3917,7 +3917,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1608095055
 RectTransform:
@@ -3959,6 +3959,7 @@ MonoBehaviour:
   descripcion: {fileID: 1546170343}
   titulo: {fileID: 2117294664}
   precio: {fileID: 1683474974}
+  imagenIU: {fileID: 1927516895}
   imagen: {fileID: 1927516897}
   menues:
   - {fileID: 1815758754}

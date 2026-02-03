@@ -16,8 +16,18 @@ MonoBehaviour:
     verduras, chu\xF1o"
   DescripcionIngles: "Succulent combination of peanuts, beef/vegetarian stock, vegetables,
     and chu\xF1o (freeze-dried potato)."
-  ImagenPlato: {fileID: 21300000, guid: f77581d74a5276d4ea0b2a55ee7a3316, type: 3}
+  ImagenPlato:
+    m_AssetGUID: f77581d74a5276d4ea0b2a55ee7a3316
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   NombrePlato: "Cazuela de man\xED"
-  ModeloPlato: {fileID: 919132149155446097, guid: e8d574bd3741d814aac460bc65b6b35f,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: e8d574bd3741d814aac460bc65b6b35f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 20
+  categoriaPlato: 1

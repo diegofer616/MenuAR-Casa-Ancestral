@@ -13,6 +13,7 @@ public class IUManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI descripcion;
     [SerializeField] TextMeshProUGUI titulo;
     [SerializeField] TextMeshProUGUI precio;
+    [SerializeField] GameObject imagenIU;
     [SerializeField] private UnityEngine.UI.Image imagen;
     [SerializeField] List <GameObject> menues;
     [SerializeField] int indiceMenu =0;
@@ -23,6 +24,7 @@ public class IUManager : MonoBehaviour
  
     void Start()
     {
+        imagen = imagenIU.GetComponent<UnityEngine.UI.Image>();
         InstanciarPlatos();
         if (VerificarPrimeraVez.instance.EsPrimeraVez())
         {
@@ -40,6 +42,11 @@ public class IUManager : MonoBehaviour
     {
         ControladorPlato.OnPlatoSeleccionado += PlatoSeleccionado;
     }
+    private void OnDisable()
+    {
+        ControladorPlato.OnPlatoSeleccionado -= PlatoSeleccionado;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
