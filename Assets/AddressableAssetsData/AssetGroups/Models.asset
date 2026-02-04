@@ -20,6 +20,27 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a6f34e041b77124f9a52ac2f72530c6
+    m_Address: Assets/Sprites/platosImagenes/sandiwch charque.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aa054f86abf26c4dadb0aa4f0da5b07
+    m_Address: Assets/modelados/FPicanteDeLengua.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0baf0a6d2df28624196a25957da0ad6b
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Sachipapita.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10e4efefb0d0d2a4389271b71c4d3cff
+    m_Address: Assets/modelados/FPicanteDePollo.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1531dfce7ebfcea4391f97bacbfa3eba
     m_Address: Assets/modelados/chicharron.fbx
     m_ReadOnly: 0
@@ -32,17 +53,74 @@ MonoBehaviour:
     m_SerializedLabels:
     - model
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2698250592e42d4459fa4b2ab69f66fd
+    m_Address: Assets/Sprites/platosImagenes/charquekan.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2af0fed87d1d8984a81b4ee0436ae336
+    m_Address: Assets/Sprites/platosImagenes/Salchipapa.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32a1a52c470664c408fe5ac572303c31
+    m_Address: Assets/Sprites/platosImagenes/ckocko de pollo.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3892e1cc3db67f24eaf549f2c9fefd3d
     m_Address: Assets/Scripts/ScriptableObject/Platos/Chorizo.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - plate
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c6ab13edbecf8443b59ce0979b6b0bf
+    m_Address: Assets/modelados/FMondongo.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d585c2fb27c5ae40bce957a6c278bb9
+    m_Address: Assets/Scripts/ScriptableObject/Platos/SandwichVegetariano.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e9f9aa9e36c24a43acfc77296e65ee1
+    m_Address: Assets/Sprites/platosImagenes/PicantePolloF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3eeb53ff71124aa4f9e9df537c618813
     m_Address: Assets/Scripts/ScriptableObject/Platos/CazuelaMani.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42fa17ab7376a9c4297c6244cc9ab07b
+    m_Address: Assets/modelados/FAnticucho.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43c2ec4dbbaa60944aaa51fd01026610
+    m_Address: Assets/modelados/FChicharron.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 451ac1d734ac8854eb1cf1b7df414bfd
+    m_Address: Assets/Sprites/platosImagenes/SulkaF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a19d19e10e4ed543ac3d5a6477801e9
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Sulka.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59dde567dd334914381bf04ffe85711b
+    m_Address: Assets/modelados/FTripas.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a07710b217d04d4c92a4c3b072277e0
     m_Address: Assets/Sprites/platosImagenes/chicharron.png
@@ -55,11 +133,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - plate
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a60d300a8ad28242877e13b9e60d826
+    m_Address: Assets/Sprites/platosImagenes/PicanteDeLenguaF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6f52e8ca3c894284da0757684d16eedb
     m_Address: Assets/Scripts/ScriptableObject/Platos/ChicharonMexicano.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7099372ef138b0848904b8a0d5adbbae
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Charquekan.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 718ff481850b32d4eaa5ac019c6e25cc
+    m_Address: Assets/modelados/FCazuela.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 787f423fd54853242aa59d494ba011c3
+    m_Address: Assets/modelados/FCrema.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79da980742f566a43a129f517ef1cef3
     m_Address: Assets/Scripts/ScriptableObject/Platos/ChicharonDeCerdo.asset
@@ -73,8 +172,143 @@ MonoBehaviour:
     m_SerializedLabels:
     - model
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 848e3ebfd4779ae4780c639b358a68b3
+    m_Address: Assets/modelados/FCharquekan.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 874a0dc4715ab3d4badc22c88b56239c
+    m_Address: Assets/modelados/FCkocko.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 887698d0d7fdacc42a8fd50c0a4267bc
+    m_Address: Assets/modelados/FSulka.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a6f03f3d284ac5499e9c1ca8519b148
+    m_Address: Assets/Scripts/ScriptableObject/Platos/CkoCko.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9890b1cff59793144b0351beda3f9358
+    m_Address: Assets/modelados/FSandCharque.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98fb0393c55f5064c81afbf54f45120d
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Anticucho.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c059960ab334004c8feda0ba30d06db
+    m_Address: Assets/Sprites/platosImagenes/nachosF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1ee4c4e5a5b4554a86d0f1447dabc19
+    m_Address: Assets/Sprites/platosImagenes/mondongo 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9324e7bf3c6fae449bf1b326c6a1b9a
+    m_Address: Assets/modelados/FSachipapa.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9d612f17f8021d4bb662d6ef49ab423
+    m_Address: Assets/Scripts/ScriptableObject/Platos/CremaHongos.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aef42da000489694f8a2cee027c8564d
+    m_Address: Assets/Sprites/platosImagenes/Anticucho.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b04ade341c49faa44ab53cab8e30d9e0
+    m_Address: Assets/Scripts/ScriptableObject/Platos/PicantePollo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9a37baccc0757947a0f1750e6ccc913
+    m_Address: Assets/Sprites/platosImagenes/SANDWICH VEGTARIANO.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bb5019c667f48134ab19f689126a10b7
     m_Address: Assets/Sprites/platosImagenes/chorizo 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c173b3d5e81a9274daf16d8999f3b0ff
+    m_Address: Assets/Sprites/platosImagenes/PAPAS NATIVAS.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3f07eee8d6179642aa59d8244eefd38
+    m_Address: Assets/Scripts/ScriptableObject/Platos/Mondongo.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c960ef67a0798f640bb471a6ddc6850d
+    m_Address: Assets/Scripts/ScriptableObject/Platos/PIcanteLengua.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d82753192d7e4af4085c76ec6ccece3f
+    m_Address: Assets/modelados/FChorizo.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbf6a845bafa62444aac9411dfdacfa1
+    m_Address: Assets/modelados/FSandVegetariano.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc7b3baef4cac7e49841997a7f471a76
+    m_Address: Assets/modelados/FChicharronMexicano.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd8de618bbef8aa429ecf504a49ca211
+    m_Address: Assets/Scripts/ScriptableObject/Platos/PapasNativas.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de64b8eed59e44b438d59d489df6789b
+    m_Address: Assets/Scripts/ScriptableObject/Platos/SandwichCharque.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e21b39a58b012de41848992f6931d276
+    m_Address: Assets/Scripts/ScriptableObject/Platos/NachosArtesanales.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - plate
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e46c79d592b0e7242bd0b90b8d1ad656
+    m_Address: Assets/Sprites/platosImagenes/sopa de hongos nativos.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e52cf8ea2175769499f7f582ae3446a4
+    m_Address: Assets/modelados/FPapas.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6a7cbe3a4a8f244b9d92be440ed10fd
+    m_Address: Assets/modelados/FNachos.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

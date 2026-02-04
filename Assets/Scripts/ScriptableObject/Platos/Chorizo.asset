@@ -22,10 +22,10 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   NombrePlato: "Chorizo Chuquisaque\xF1o"
   ModeloPlato:
-    m_AssetGUID: 164bb2c79276ef04cb7c53fb58404d51
+    m_AssetGUID: d82753192d7e4af4085c76ec6ccece3f
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   precioPlato: Bs 50
-  categoriaPlato: 0
+  categoriaPlato: 1

@@ -22,10 +22,10 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   NombrePlato: Chicharon de cerdo
   ModeloPlato:
-    m_AssetGUID: 1531dfce7ebfcea4391f97bacbfa3eba
+    m_AssetGUID: 43c2ec4dbbaa60944aaa51fd01026610
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   precioPlato: Bs 60
-  categoriaPlato: 2
+  categoriaPlato: 1

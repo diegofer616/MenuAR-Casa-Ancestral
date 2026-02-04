@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: PIcanteLengua
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "Lengua de res, aj\xED amarillo, tallar\xEDn, papa y chu\xF1ofuti
+    (chu\xF1o en salsa de man\xED)"
+  DescripcionIngles: "Beef tongue, yellow chili pepper, noodles, potato and chu\xF1ofuti
+    (chu\xF1o in peanut sauce)"
+  ImagenPlato:
+    m_AssetGUID: 6a60d300a8ad28242877e13b9e60d826
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  NombrePlato: Picante de lengua
+  ModeloPlato:
+    m_AssetGUID: 0aa054f86abf26c4dadb0aa4f0da5b07
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  precioPlato: Bs 75
+  categoriaPlato: 0

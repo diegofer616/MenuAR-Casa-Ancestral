@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: PicantePollo
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "pollo, aj\xED rojo, tallar\xEDn, papa, chu\xF1ofuti"
+  DescripcionIngles: "\r\nchicken, red chili pepper, noodles, potato, chu\xF1ofuti"
+  ImagenPlato:
+    m_AssetGUID: 3e9f9aa9e36c24a43acfc77296e65ee1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  NombrePlato: Picante de pollo
+  ModeloPlato:
+    m_AssetGUID: 10e4efefb0d0d2a4389271b71c4d3cff
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  precioPlato: Bs 50
+  categoriaPlato: 0

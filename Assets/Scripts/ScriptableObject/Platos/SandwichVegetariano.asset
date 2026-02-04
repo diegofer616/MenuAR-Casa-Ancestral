@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DescripcionPlato: "Pan casero, hongos salteados en salsa de man\xED"
   DescripcionIngles: "Homemade bread, mushrooms saut\xE9ed in peanut sauce"
-  ImagenPlato: {fileID: 21300000, guid: b9a37baccc0757947a0f1750e6ccc913, type: 3}
+  ImagenPlato:
+    m_AssetGUID: b9a37baccc0757947a0f1750e6ccc913
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   NombrePlato: Sandwich Vegetariano
-  ModeloPlato: {fileID: 919132149155446097, guid: 30ac14fe7071ece4fbf183b0db1a9ab4,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: dbf6a845bafa62444aac9411dfdacfa1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 28
+  categoriaPlato: 2

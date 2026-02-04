@@ -22,10 +22,10 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   NombrePlato: Chicharon mexicano
   ModeloPlato:
-    m_AssetGUID: f4b54c0afc2a0fd428d15dbd5dceb9b7
+    m_AssetGUID: dc7b3baef4cac7e49841997a7f471a76
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   precioPlato: Bs 65
-  categoriaPlato: 2
+  categoriaPlato: 1

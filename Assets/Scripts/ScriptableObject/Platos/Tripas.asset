@@ -22,10 +22,10 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   NombrePlato: Tripitas
   ModeloPlato:
-    m_AssetGUID: f8431ddc5d029b945a3fd9c84c74d8ca
+    m_AssetGUID: 59dde567dd334914381bf04ffe85711b
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   precioPlato: Bs 23
-  categoriaPlato: 1
+  categoriaPlato: 2

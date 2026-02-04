@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: Sulka
+  m_EditorClassIdentifier: 
+  DescripcionPlato: Carne de res desmechada, papa, mote, huevo cocido y queso
+  DescripcionIngles: Shredded beef, potato, hominy, boiled egg and cheese
+  ImagenPlato:
+    m_AssetGUID: 451ac1d734ac8854eb1cf1b7df414bfd
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  NombrePlato: Sulka
+  ModeloPlato:
+    m_AssetGUID: 887698d0d7fdacc42a8fd50c0a4267bc
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  precioPlato: Bs 75
+  categoriaPlato: 1

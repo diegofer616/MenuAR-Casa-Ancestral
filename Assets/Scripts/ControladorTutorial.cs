@@ -5,7 +5,6 @@ using UnityEngine.Video;
 public class ControladorTutorial : MonoBehaviour
 {
     [SerializeField] GameObject panelTutorial;
-    [SerializeField] VideoPlayer video;
     void Start()
     {
         StartCoroutine(EsperaTutorial());
@@ -18,6 +17,5 @@ public class ControladorTutorial : MonoBehaviour
     public void ApagarTutorial()
     {
         panelTutorial.SetActive(false);
-        video.Stop();
     }
 }

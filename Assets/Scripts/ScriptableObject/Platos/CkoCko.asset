@@ -15,8 +15,18 @@ MonoBehaviour:
   DescripcionPlato: "Filetes de pollo con salsa tradiconal con chicha y aj\xED amarillo"
   DescripcionIngles: Chicken fillets with traditional sauce with chicha and yellow
     chili pepper
-  ImagenPlato: {fileID: 21300000, guid: 32a1a52c470664c408fe5ac572303c31, type: 3}
+  ImagenPlato:
+    m_AssetGUID: 32a1a52c470664c408fe5ac572303c31
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   NombrePlato: Pasta al Ckocko de pollo
-  ModeloPlato: {fileID: 919132149155446097, guid: 103c382274c54e04ab646010afbab31c,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: 874a0dc4715ab3d4badc22c88b56239c
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 60
+  categoriaPlato: 0

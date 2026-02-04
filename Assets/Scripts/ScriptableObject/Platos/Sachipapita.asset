@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a72375efe2cc1498822b6f940386b6, type: 3}
+  m_Name: Sachipapita
+  m_EditorClassIdentifier: 
+  DescripcionPlato: "Salchicha viena de la charcuter\xEDa del abuelo artesanal, papas
+    fritas"
+  DescripcionIngles: '
+
+    Grandpa''s artisanal deli Vienna sausage, french fries'
+  ImagenPlato:
+    m_AssetGUID: 2af0fed87d1d8984a81b4ee0436ae336
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  NombrePlato: Salchipapita
+  ModeloPlato:
+    m_AssetGUID: a9324e7bf3c6fae449bf1b326c6a1b9a
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  precioPlato: Bs 25
+  categoriaPlato: 2

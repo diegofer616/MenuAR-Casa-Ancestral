@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DescripcionPlato: "Hongos org\xE1nicos nativos del sector de pisil\xED de Tarabuco"
   DescripcionIngles: "Organic mushrooms native to the pisil\xED sector of Tarabuco"
-  ImagenPlato: {fileID: 21300000, guid: e46c79d592b0e7242bd0b90b8d1ad656, type: 3}
+  ImagenPlato:
+    m_AssetGUID: e46c79d592b0e7242bd0b90b8d1ad656
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   NombrePlato: Crema hongos nativos
-  ModeloPlato: {fileID: 919132149155446097, guid: 86efae8077751a847b77e589f9c105aa,
-    type: 3}
+  ModeloPlato:
+    m_AssetGUID: 787f423fd54853242aa59d494ba011c3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   precioPlato: Bs 28
+  categoriaPlato: 1

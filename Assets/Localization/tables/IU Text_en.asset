@@ -69,8 +69,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24885336556490752
-    m_Localized: For a better experience, a flat, large surface is recommended, with
-      no nearby objects and good lighting.
+    m_Localized: Use a textured surface with good lighting and slowly move your device.
     m_Metadata:
       m_Items: []
   - m_Id: 24886499779596288
