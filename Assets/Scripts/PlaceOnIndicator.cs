@@ -159,7 +159,7 @@ public class PlaceOnIndicator : MonoBehaviour
     void FinishPlacement()
     {
         if (objectManipulator != null)
-            objectManipulator.getARObject(spawnedObject);
+            objectManipulator.GetARObject(spawnedObject);
         spawnedObject.SetActive(true);
     }
 

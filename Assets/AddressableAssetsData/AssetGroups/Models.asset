@@ -41,18 +41,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1531dfce7ebfcea4391f97bacbfa3eba
-    m_Address: Assets/modelados/chicharron.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 164bb2c79276ef04cb7c53fb58404d51
-    m_Address: Assets/modelados/charkekan.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2698250592e42d4459fa4b2ab69f66fd
     m_Address: Assets/Sprites/platosImagenes/charquekan.png
     m_ReadOnly: 0
@@ -166,12 +154,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - plate
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 82b7e0a6dc8f1824b8da2ee41de73e02
-    m_Address: Assets/modelados/sandich de charque.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 848e3ebfd4779ae4780c639b358a68b3
     m_Address: Assets/modelados/FCharquekan.fbx
     m_ReadOnly: 0
@@ -185,8 +167,7 @@ MonoBehaviour:
   - m_GUID: 887698d0d7fdacc42a8fd50c0a4267bc
     m_Address: Assets/modelados/FSulka.fbx
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a6f03f3d284ac5499e9c1ca8519b148
     m_Address: Assets/Scripts/ScriptableObject/Platos/CkoCko.asset
@@ -312,18 +293,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e8d574bd3741d814aac460bc65b6b35f
-    m_Address: Assets/modelados/cazuela.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f4b54c0afc2a0fd428d15dbd5dceb9b7
-    m_Address: Assets/modelados/CHICHARRON MEXICANO.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4e5608f275fc4b4fa7a2d39420409fe
     m_Address: Assets/Sprites/platosImagenes/tripas.png
     m_ReadOnly: 0
@@ -333,12 +302,6 @@ MonoBehaviour:
     m_Address: Assets/Sprites/platosImagenes/cazuela de mani.png
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f8431ddc5d029b945a3fd9c84c74d8ca
-    m_Address: Assets/modelados/tripas.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - model
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a076dab9952f3da4fa71619b980f7f00, type: 2}

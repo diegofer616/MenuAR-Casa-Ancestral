@@ -11,7 +11,7 @@ public class ControladorTutorial : MonoBehaviour
     }
     public IEnumerator EsperaTutorial()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         panelTutorial.SetActive(false);
     }
     public void ApagarTutorial()

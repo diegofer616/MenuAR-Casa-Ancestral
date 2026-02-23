@@ -8,9 +8,10 @@ public class ObjectManipulator : MonoBehaviour
     private Vector2 touchPositionDiff;
 
     private float rotationTolerance = 1.5f;
-    [SerializeField] float rotationSensitivity = 1f; // factor de sensibilidad (ajustable)
-
-    public void getARObject(GameObject newAr)
+    private float scaleTolerance = 25f;
+    [SerializeField] float speedRotation = 1f; 
+    [SerializeField] float scaleFactor = 0.1f;
+    public void GetARObject(GameObject newAr)
     {
         ARObject = newAr;
     }
@@ -33,21 +34,19 @@ public class ObjectManipulator : MonoBehaviour
             {
                 Vector2 currentTouchDiff = touchTwo.position - touchOne.position;
                 float currentTouchDis = Vector2.Distance(touchTwo.position, touchOne.position);
+                float disDiff = currentTouchDis - touchDis;
 
+                if (Mathf.Abs(disDiff) > scaleTolerance)
+                {
+                    Vector3 newScale = ARObject.transform.localScale + Mathf.Sign(disDiff) * Vector3.one * scaleFactor;
+                    ARObject.transform.localScale = Vector3.Lerp(ARObject.transform.localScale, newScale, 0.05f);
+                }
                 // Ángulo entre la diferencia previa y la actual (en grados)
                 float angle = Vector2.SignedAngle(touchPositionDiff, currentTouchDiff);
 
                 if (Mathf.Abs(angle) > rotationTolerance && ARObject != null)
                 {
-                    // preservar posición world antes de rotar (evita pequeños desvíos por pivote)
-                    Vector3 worldPos = ARObject.transform.position;
-
-                    // Rotación incremental: eje up local
-                    float deltaAngle = -angle * rotationSensitivity;
-                    ARObject.transform.Rotate(Vector3.up, deltaAngle, Space.Self);
-
-                    // Reaplicar la posición world para evitar desplazamientos accidentales
-                    ARObject.transform.position = worldPos;
+                    ARObject.transform.rotation = Quaternion.Euler(0, ARObject.transform.rotation.eulerAngles.y - Mathf.Sign(angle) * speedRotation, 0);
                 }
 
                 touchPositionDiff = currentTouchDiff;

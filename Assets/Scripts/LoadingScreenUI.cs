@@ -23,7 +23,7 @@ public class LoadingScreenUI : MonoBehaviour
             Debug.Log("Mostrar pantalla de carga");
             _animator.SetTrigger("Show");
             loadingScreeen.SetActive(true);
-            video.time = 0;
+            video.time = 1;
             video.Play();
         }
         else

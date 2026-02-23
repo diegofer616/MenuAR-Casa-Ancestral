@@ -1198,10 +1198,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1815758755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 138.86714}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 359.7259, y: -572.88794}
+  m_SizeDelta: {x: 719.4518, y: 138.86714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301592104
 MonoBehaviour:
@@ -1223,12 +1223,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MENU AR
-
-    CASA ANCESTRAL'
+  m_text: "Men\xFA AR\nCasa Acestral"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5b246a8d754ea584e863f8fb9cdd723c, type: 2}
-  m_sharedMaterial: {fileID: -8578984244186644662, guid: 5b246a8d754ea584e863f8fb9cdd723c,
+  m_fontAsset: {fileID: 11400000, guid: 673a4d462ee59a7478fc00372a7aaa47, type: 2}
+  m_sharedMaterial: {fileID: -6873608998690224160, guid: 673a4d462ee59a7478fc00372a7aaa47,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1854,10 +1852,10 @@ RectTransform:
   - {fileID: 866202701}
   m_Father: {fileID: 1815758755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 459.86713}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 359.7259, y: -880.255}
+  m_SizeDelta: {x: 719.4518, y: 459.86713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610421251
 MonoBehaviour:
@@ -1938,10 +1936,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1815758755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 129.86714}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 359.72592, y: -170.7865}
+  m_SizeDelta: {x: 719.4518, y: 129.86714}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &710471536
 CanvasRenderer:
@@ -2478,9 +2476,9 @@ RectTransform:
   - {fileID: 755096801}
   m_Father: {fileID: 610421250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 359.7259, y: -317.36713}
   m_SizeDelta: {x: 316.4979, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866202702
@@ -2552,7 +2550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9411765, g: 0.92941177, b: 0.8980392, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2714,10 +2712,10 @@ RectTransform:
   - {fileID: 2064105709}
   m_Father: {fileID: 610421250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 316.4979, y: 125}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 359.7259, y: -132.36713}
+  m_SizeDelta: {x: 382.413, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132436947
 MonoBehaviour:
@@ -2819,8 +2817,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 72c7567557a015d45847a424a3209ffb, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 577347a59e02a83499f92e0d77af7c6f, type: 3}
+  m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2828,7 +2826,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.5
 --- !u!222 &1132436949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5065,7 +5063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1815758755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5796,8 +5794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "ver men\xFA"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 25f075938ec46864187d557f41a72d88, type: 2}
-  m_sharedMaterial: {fileID: 4338095541473950792, guid: 25f075938ec46864187d557f41a72d88,
+  m_fontAsset: {fileID: 11400000, guid: 10ef7c570a5c09146bd3611e396939d0, type: 2}
+  m_sharedMaterial: {fileID: -343255181582533088, guid: 10ef7c570a5c09146bd3611e396939d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
