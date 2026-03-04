@@ -242,11 +242,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2054229218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -255}
-  m_SizeDelta: {x: 550, y: 69.056}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 550, y: 69.05603}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &247181443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,8 +310,8 @@ MonoBehaviour:
   m_text: "Usa una superficie con textura y buena iluminaci\xF3n, y mueve el dispositivo
     lentamente."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 25f075938ec46864187d557f41a72d88, type: 2}
-  m_sharedMaterial: {fileID: 4338095541473950792, guid: 25f075938ec46864187d557f41a72d88,
+  m_fontAsset: {fileID: 11400000, guid: 10ef7c570a5c09146bd3611e396939d0, type: 2}
+  m_sharedMaterial: {fileID: -343255181582533088, guid: 10ef7c570a5c09146bd3611e396939d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -653,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 75}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 391.215, y: 69.055786}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &912460188
@@ -678,8 +678,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cargando...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 25f075938ec46864187d557f41a72d88, type: 2}
-  m_sharedMaterial: {fileID: 4338095541473950792, guid: 25f075938ec46864187d557f41a72d88,
+  m_fontAsset: {fileID: 11400000, guid: 09229d7e5b71fec4fa3ddf4511023cda, type: 2}
+  m_sharedMaterial: {fileID: -1445552872933024201, guid: 09229d7e5b71fec4fa3ddf4511023cda,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -847,9 +847,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 640, y: 1136}
+  m_ReferenceResolution: {x: 720, y: 1280}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -934,7 +934,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 624.07, y: 866.7639}
+  m_SizeDelta: {x: 606.33, y: 842.1249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229842720
 MonoBehaviour:
@@ -1081,7 +1081,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991912606}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 0d0e3764ef34bdb4496950d99d257fe9, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d525c014131e1cb4b92339297367a336, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1095,14 +1095,12 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -1177,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.34173957, b: 0.33285868, a: 1}
+  m_Color: {r: 0.7, g: 0.17978331, b: 0.06299998, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

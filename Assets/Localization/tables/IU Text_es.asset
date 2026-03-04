@@ -72,7 +72,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24886499779596288
-    m_Localized: Puedes rotar el objeto deslizando dos dedos en direcciones opuestas
+    m_Localized: Puedes rotar y escalar el plato usando gestos con dos dedos
     m_Metadata:
       m_Items: []
   references:

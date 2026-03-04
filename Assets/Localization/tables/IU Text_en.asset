@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24886499779596288
-    m_Localized: You can rotate the object by sliding two fingers in opposite directions.
+    m_Localized: You can rotate and scale the dish using two-finger gestures
     m_Metadata:
       m_Items: []
   references:

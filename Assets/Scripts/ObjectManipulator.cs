@@ -7,7 +7,7 @@ public class ObjectManipulator : MonoBehaviour
     private float touchDis;
     private Vector2 touchPositionDiff;
 
-    private float rotationTolerance = 1.5f;
+    private float rotationTolerance = 2.5f;
     private float scaleTolerance = 25f;
     [SerializeField] float speedRotation = 1f; 
     [SerializeField] float scaleFactor = 0.1f;

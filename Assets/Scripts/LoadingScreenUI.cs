@@ -13,6 +13,7 @@ public class LoadingScreenUI : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        video.prepareCompleted += OnVideoPrepared;
     }
     public void ToggleScreen(bool enable)
     {
@@ -21,10 +22,11 @@ public class LoadingScreenUI : MonoBehaviour
         {
             
             Debug.Log("Mostrar pantalla de carga");
-            _animator.SetTrigger("Show");
+            
             loadingScreeen.SetActive(true);
-            video.time = 1;
-            video.Play();
+            _animator.SetTrigger("Show");
+            video.Prepare();
+            
         }
         else
         {
@@ -32,6 +34,12 @@ public class LoadingScreenUI : MonoBehaviour
             StartCoroutine(ProcessLevelLoading());
         }
     }
+    void OnVideoPrepared(VideoPlayer vp)
+    {
+        vp.time = 0; 
+        vp.Play();   
+    }
+
     public void SendLoadingScreenShowEvent()
     {
         loadingScreenToggled.Raise(true);

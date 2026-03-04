@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class TabGroup : MonoBehaviour
 {
     public List<TabButtom> tabButtons;
+    public List<Sprite> tabSprites;
+    public List<Sprite> tabHoverSprites;
     public Color tabIdle = Color.white;
     public Color tabActive;
     public Color tabHover;
@@ -18,6 +20,7 @@ public class TabGroup : MonoBehaviour
         }
         tabButtons.Add(button);
     }
+    
     public void OnTabEnter(TabButtom button)
     {
         ResetTabs();
@@ -35,7 +38,9 @@ public class TabGroup : MonoBehaviour
     {
         selectButtom = button;
         ResetTabs();
-        button.background.color = tabActive;
+        //button.background.color = tabActive;
+        int e = button.transform.GetSiblingIndex();
+        button.background.sprite = tabHoverSprites[e];
         button.tabText.color = tabActive;
         
         int index = button.transform.GetSiblingIndex();
@@ -55,8 +60,10 @@ public class TabGroup : MonoBehaviour
     {
         foreach (TabButtom button in tabButtons)
         {
+            int i = button.transform.GetSiblingIndex();
             if (selectButtom != null && button == selectButtom) { continue; }
-            button.background.color = Color.white;
+            //button.background.color = Color.white;
+            button.background.sprite = tabSprites[i];
             button.tabText.color = Color.white;
         }
     }
